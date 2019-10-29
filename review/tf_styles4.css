@@ -22,20 +22,53 @@
 
 
 /* General Flex Styles */
-
-
-
-
+body{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+section#left{
+   flex: 1 8 351px;
+}
+section#right{
+   flex: 8 1 351px;
+}
+section.tips{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+article{
+   display: flex;
+   flex: 2 1 351px;
+}
+aside{
+   display: flex;
+   flex: 1 2 250px;
+}
+nav.horizontal ul{
+   display: flex;
+   flex-flow: column wrap;
+}
 
 
 /* ===============================
 	Mobile Devices: 0 to 480px 
    ===============================
 */
-	
-
-
-
+@media only screen and (max-width: 480px){
+   nav.vertical ul{
+      display: flex;
+      flex-flow: column wrap;
+      height: 240px;
+   }
+   section#left{
+      order: 99;
+   }
+   body footer{
+      order: 100;
+   }
+}
 
 /* ============================================
 	Tablet and Desktop Devices: 481px or more 
